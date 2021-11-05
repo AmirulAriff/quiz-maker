@@ -2266,6 +2266,7 @@ def answerQuiz():
                 checkdata3 = cursor.fetchall()
                 print(checkdata3[0][0])
                 print("salam")
+                print("salam")
 
         else:
             print("we dont have any quiz for you yet")
