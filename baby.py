@@ -2265,6 +2265,7 @@ def answerQuiz():
                 cursor.execute(query45 % (row))
                 checkdata3 = cursor.fetchall()
                 print(checkdata3[0][0])
+                print("salam")
 
         else:
             print("we dont have any quiz for you yet")
