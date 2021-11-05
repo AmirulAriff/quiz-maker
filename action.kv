@@ -1,0 +1,138 @@
+<ScreenManagement>:
+    CreateWindow:
+        id:create
+        name: "create"
+
+    MainWindow:
+        id: main
+        name: "main"
+
+<CreateAccountWindow>:
+
+    panjang: panjang
+    lebar: lebar
+    tinggi: tinggi
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "serfbgokmfor"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Panjang: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: panjang
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Lebar: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: lebar
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Tinggi:"
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: tinggi
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Fefrkglt;mlfavsmdmcfr"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.15
+            text: "Kira"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+
+
+
+<MainWindow>:
+    panjang: panjang
+    lebar: lebar
+    tinggi: tinggi
+    luas1: luas1
+    luas2: luas2
+    cat: cat
+
+    FloatLayout:
+        Label:
+            id: panjang
+            pos_hint:{"x": 0.1, "top":0.9}
+            size_hint:0.8, 0.2
+            text: "Panjang: "
+
+        Label:
+            id: lebar
+            pos_hint:{"x": 0.1, "top":0.8}
+            size_hint:0.8, 0.2
+            text: "Lebar: "
+
+        Label:
+            id: tinggi
+            pos_hint:{"x": 0.1, "top":0.7}
+            size_hint:0.8, 0.2
+            text: "Tinggi:"
+
+        Label:
+            id: luas1
+            pos_hint:{"x": 0.1, "top":0.6}
+            size_hint:0.8, 0.2
+            text: "Luas:"
+
+        Label:
+            id: luas2
+            pos_hint:{"x": 0.1, "top":0.5}
+            size_hint:0.8, 0.2
+            text: "Luas:"
+
+        Label:
+            id: cat
+            pos_hint:{"x": 0.1, "top":0.4}
+            size_hint:0.8, 0.2
+            text: "Cat:"
+
+        Button:
+            pos_hint:{"x":0.2, "y": 0.1}
+            size_hint:0.6,0.2
+            text: "Semula"
+            on_release:
+                app.root.current = "create"
+                root.manager.transition.direction = "down"
